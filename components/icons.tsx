@@ -1,0 +1,14 @@
+import type { SVGProps } from "react";
+type IconProps = SVGProps<SVGSVGElement>;
+const Base = ({ children, ...props }: IconProps) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{children}</svg>;
+export const ArrowUpRight = (p: IconProps) => <Base {...p}><path d="M7 17 17 7M8 7h9v9" /></Base>;
+export const ArrowDown = (p: IconProps) => <Base {...p}><path d="M12 4v16M6 14l6 6 6-6" /></Base>;
+export const Mail = (p: IconProps) => <Base {...p}><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></Base>;
+export const MapPin = (p: IconProps) => <Base {...p}><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></Base>;
+export const Github = (p: IconProps) => <Base {...p}><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.1-1.6-.5-2.2 2.1-.2 4.3-1 4.3-4.6 0-1-.3-1.8-1-2.5.1-.2.4-1.2-.1-2.5 0 0-.8-.3-2.6 1a9 9 0 0 0-4.7 0c-1.8-1.3-2.6-1-2.6-1-.5 1.3-.2 2.3-.1 2.5-.7.7-1 1.5-1 2.5 0 3.6 2.2 4.4 4.3 4.6-.4.3-.6.8-.6 1.5V22" /></Base>;
+export const Linkedin = (p: IconProps) => <Base {...p}><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 0 1 4 0v3M12 11v5" /></Base>;
+export const Sun = (p: IconProps) => <Base {...p}><circle cx="12" cy="12" r="3.5" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></Base>;
+export const Moon = (p: IconProps) => <Base {...p}><path d="M20.6 15.4A8.5 8.5 0 0 1 8.6 3.4 8.5 8.5 0 1 0 20.6 15.4Z" /></Base>;
+export const Menu = (p: IconProps) => <Base {...p}><path d="M4 7h16M4 12h16M4 17h16" /></Base>;
+export const X = (p: IconProps) => <Base {...p}><path d="m6 6 12 12M18 6 6 18" /></Base>;
+export const Send = (p: IconProps) => <Base {...p}><path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" /></Base>;

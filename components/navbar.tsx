@@ -1,0 +1,11 @@
+"use client";
+import { useEffect, useState } from "react";
+import { Menu, X } from "@/components/icons";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { navigation, profile } from "@/lib/data";
+export function Navbar() {
+  const [open, setOpen] = useState(false); const [active, setActive] = useState("about");
+  useEffect(() => { const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && setActive(entry.target.id)), { rootMargin: "-35% 0px -55%" }); const nodes = navigation.map(([, id]) => document.getElementById(id)).filter(Boolean) as Element[]; nodes.forEach((node) => observer.observe(node)); return () => observer.disconnect(); }, []);
+  const linkClass = (id: string) => `focus-ring rounded-md px-2 py-1 text-sm transition ${active === id ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--ink)]"}`;
+  return <header className="sticky top-0 z-50 border-b border-transparent bg-[color:var(--paper)]/85 backdrop-blur-md"><nav className="shell flex h-16 items-center justify-between" aria-label="Main navigation"><a href="#top" className="focus-ring font-mono text-sm font-bold tracking-tight text-[var(--ink)]"><span className="text-[var(--accent)]">&lt;</span>{profile.shortName}<span className="text-[var(--accent)]"> /&gt;</span></a><div className="hidden items-center gap-1 md:flex">{navigation.map(([label, id]) => <a key={id} href={`#${id}`} className={linkClass(id)}>{label}</a>)}<span className="mx-2 h-4 border-l border-[var(--line)]" /><ThemeToggle /></div><div className="flex items-center gap-2 md:hidden"><ThemeToggle /><button onClick={() => setOpen(!open)} className="focus-ring grid size-9 place-items-center rounded-full border border-[var(--line)]" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open}>{open ? <X className="size-4" /> : <Menu className="size-4" />}</button></div></nav>{open && <div className="shell pb-4 md:hidden"><div className="rounded-xl border border-[var(--line)] bg-[var(--paper)] p-2 shadow-xl">{navigation.map(([label, id]) => <a key={id} onClick={() => setOpen(false)} href={`#${id}`} className={`${linkClass(id)} block px-3 py-2`}>{label}</a>)}</div></div>}</header>;
+}
