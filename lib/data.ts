@@ -3,7 +3,7 @@ export type Project = { title: string; type: string; description: string; tags: 
 
 export const profile = {
   name: "Muhammad Moazzam", shortName: "MM", role: "Associate Software Engineer / Front-End Developer", location: "Rawalpindi, Pakistan", email: "rajamoazzam789@gmail.com", phone: "0341-1008699",
-  linkedin: "https://linkedin.com/in/muhammad-moazzam", github: "https://github.com/webdesign4ever",
+  linkedin: "https://www.linkedin.com/in/muhammad-moazzam-305856242", github: "https://github.com/webdesign4ever",
   about: "I am a front-end developer who enjoys turning complex business requirements into clear, reliable experiences. My work spans production Angular applications and the React / Next.js ecosystem, with a practical understanding of API integration and backend foundations in Nest.js, Express, and PostgreSQL.",
 };
 export const navigation = [["About", "about"], ["Experience", "experience"], ["Work", "projects"], ["Skills", "skills"], ["Contact", "contact"]] as const;
