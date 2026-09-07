@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://moazzam.dev"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://moazzam.up.railway.app"),
   title: { default: "Muhammad Moazzam | Front-End Developer", template: "%s | Muhammad Moazzam" },
   description: "Front-end developer building thoughtful, enterprise-grade web applications with Angular, React, and Next.js.",
   keywords: ["Muhammad Moazzam", "front-end developer", "Angular", "React", "Next.js", "Pakistan"],
