@@ -24,7 +24,7 @@ The contact endpoint is `app/api/contact/route.ts` and uses Resend's email API. 
 ```bash
 RESEND_API_KEY=re_...
 RESEND_FROM_EMAIL=Portfolio <onboarding@resend.dev>
-CONTACT_TO_EMAIL=rajamoazzam789@gmail.com
+CONTACT_TO_EMAIL=example@gmail.com
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
 
