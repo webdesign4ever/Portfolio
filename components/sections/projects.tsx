@@ -9,6 +9,8 @@ const themes = {
   blue: "from-sky-500/70 via-sky-200 to-[#e9f6ff] dark:from-sky-500/40 dark:to-[#1c2433]",
   violet:
     "from-violet-500/70 via-violet-200 to-[#f3edff] dark:from-violet-500/40 dark:to-[#1c2433]",
+  emerald:
+    "from-emerald-500/70 via-emerald-200 to-[#eafff4] dark:from-emerald-500/40 dark:to-[#1c2433]",
 };
 export function Projects() {
   return (
@@ -27,7 +29,7 @@ export function Projects() {
             </p>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.08}>
               <motion.article
@@ -82,7 +84,7 @@ export function Projects() {
                     </a>
                   ) : (
                     <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[var(--muted)]">
-                      Client project
+                      {project.label ?? "Client project"}
                     </span>
                   )}
                 </div>

@@ -10,8 +10,9 @@ export type Project = {
   type: string;
   description: string;
   tags: string[];
-  accent: "orange" | "blue" | "violet";
+  accent: "orange" | "blue" | "violet" | "emerald";
   url?: string;
+  label?: string;
 };
 
 export const profile = {
@@ -69,6 +70,14 @@ export const experiences: Experience[] = [
 ];
 export const projects: Project[] = [
   {
+    title: "Innovazy Suite",
+    type: "POS & business management platform",
+    description:
+      "A full point-of-sale and business suite built end-to-end solo, covering invoicing, inventory, and multi-user role management across retail, distribution, and auto-parts businesses.",
+    tags: ["React", "MUI", "react-i18next", "react-pdf"],
+    accent: "emerald",
+  },
+  {
     title: "ChainAware",
     type: "Web3 client application",
     description:
@@ -88,9 +97,10 @@ export const projects: Project[] = [
     title: "Fake Image Detection",
     type: "Deep learning platform",
     description:
-      "An image-forensics system that flags AI-generated content and explains its decision with Grad-CAM heatmaps.",
+      "An image-forensics system that flags AI-generated images and explains its decision with Grad-CAM heatmaps.",
     tags: ["Python", "TensorFlow", "Flask", "React"],
     accent: "violet",
+    label: "Final Year Project",
   },
 ];
 export const skillGroups = [

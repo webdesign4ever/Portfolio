@@ -24,14 +24,14 @@ export function About() {
                 years learning and shipping
               </p>
             </div>
-            <div className="rounded-2xl border border-[var(--line)] p-5">
+            {/* <div className="rounded-2xl border border-[var(--line)] p-5">
               <p className="font-mono text-2xl font-bold text-[var(--accent)]">
                 2
               </p>
               <p className="mt-1 text-sm text-[var(--muted)]">
                 front-end ecosystems
               </p>
-            </div>
+            </div> */}
           </div>
         </Reveal>
       </div>
