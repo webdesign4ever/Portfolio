@@ -1,3 +1,46 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from "@/components/icons";
 import { profile } from "@/lib/data";
-export function Footer() { return <footer className="border-t border-[var(--line)] py-8"><div className="shell flex flex-col gap-5 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between"><p>Designed and built by {profile.name}. © {new Date().getFullYear()}.</p><div className="flex items-center gap-3"><a className="focus-ring hover:text-[var(--accent)]" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github className="size-4" /></a><a className="focus-ring hover:text-[var(--accent)]" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin className="size-4" /></a><a className="focus-ring hover:text-[var(--accent)]" href={`mailto:${profile.email}`} aria-label="Email"><Mail className="size-4" /></a><a className="focus-ring ml-2 inline-flex items-center gap-1 hover:text-[var(--accent)]" href="#top">Back to top <ArrowUpRight className="size-3" /></a></div></div></footer>; }
+export function Footer() {
+  return (
+    <footer className="border-t border-[var(--line)] py-8">
+      <div className="shell flex flex-col gap-5 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
+        <p>
+          Designed and built by {profile.name}. © {new Date().getFullYear()}.
+        </p>
+        <div className="flex items-center gap-3">
+          <a
+            className="focus-ring hover:text-[var(--accent)]"
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <Github className="size-4" />
+          </a>
+          <a
+            className="focus-ring hover:text-[var(--accent)]"
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="size-4" />
+          </a>
+          <a
+            className="focus-ring hover:text-[var(--accent)]"
+            href={`mailto:${profile.email}`}
+            aria-label="Email"
+          >
+            <Mail className="size-4" />
+          </a>
+          <a
+            className="focus-ring ml-2 inline-flex items-center gap-1 hover:text-[var(--accent)]"
+            href="#top"
+          >
+            Back to top <ArrowUpRight className="size-3" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}

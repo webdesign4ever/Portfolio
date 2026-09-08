@@ -9,5 +9,19 @@ import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 
 export default function Home() {
-  return <><Navbar /><main><Hero /><About /><Experience /><Projects /><Skills /><Certifications /><Contact /></main><Footer /></>;
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Certifications />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }

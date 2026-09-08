@@ -1,3 +1,35 @@
 import { Reveal } from "@/components/reveal";
 import { skillGroups } from "@/lib/data";
-export function Skills() { return <section id="skills" className="shell py-24"><Reveal><p className="eyebrow">04 / Toolkit</p><h2 className="section-title mt-4">A practical stack.</h2></Reveal><div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)] md:grid-cols-2">{skillGroups.map((group, index) => <Reveal key={group.label} delay={index * .05} className="bg-[var(--paper)] p-6"><p className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--accent)]">{group.label}</p><div className="mt-5 flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="rounded-full border border-[var(--line)] px-3 py-1.5 text-sm text-[var(--muted)]">{item}</span>)}</div></Reveal>)}</div></section>; }
+export function Skills() {
+  return (
+    <section id="skills" className="shell py-24">
+      <Reveal>
+        <p className="eyebrow">04 / Toolkit</p>
+        <h2 className="section-title mt-4">A practical stack.</h2>
+      </Reveal>
+      <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)] md:grid-cols-2">
+        {skillGroups.map((group, index) => (
+          <Reveal
+            key={group.label}
+            delay={index * 0.05}
+            className="bg-[var(--paper)] p-6"
+          >
+            <p className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
+              {group.label}
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-[var(--line)] px-3 py-1.5 text-sm text-[var(--muted)]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
