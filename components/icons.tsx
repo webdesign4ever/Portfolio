@@ -79,3 +79,16 @@ export const Send = (p: IconProps) => (
     <path d="M22 2 11 13" />
   </Base>
 );
+export const Star = (p: IconProps) => (
+  <Base {...p}>
+    <path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z" />
+  </Base>
+);
+export const GitFork = (p: IconProps) => (
+  <Base {...p}>
+    <circle cx="6" cy="5" r="2" />
+    <circle cx="18" cy="5" r="2" />
+    <circle cx="12" cy="19" r="2" />
+    <path d="M6 7v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V7M12 11v6" />
+  </Base>
+);
